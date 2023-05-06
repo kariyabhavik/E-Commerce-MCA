@@ -1,4 +1,8 @@
-`<!DOCTYPE html>
+<!-- Connect file -->
+<?php
+include('includes/connect.php');
+?>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -141,24 +145,19 @@
     <li class="nav-item bg-info">
       <a href="#" class="nav-link text-light"><h4>Delivery Brands</h4></a>
     </li>
-    <li class="nav-item">
-      <a href="#" class="nav-link text-light">Brand1</a>
-    </li>
-    <li class="nav-item">
-      <a href="#" class="nav-link text-light">Brand2</a>
-    </li>
-    <li class="nav-item">
-      <a href="#" class="nav-link text-light">Brand3</a>
-    </li>
-    <li class="nav-item">
-      <a href="#" class="nav-link text-light">Brand4</a>
-    </li>
-    <li class="nav-item">
-      <a href="#" class="nav-link text-light">Brand5</a>
-    </li>
-    <li class="nav-item">
-      <a href="#" class="nav-link text-light">Brand6</a>
-    </li>
+    <?php
+      $select_brands = "select * from `brands`";
+      $result_brands = mysqli_query($con , $select_brands);
+      // echo $row_data['brand_title'];
+      // echo $row_data['brand_title'];
+      while ($row_data = mysqli_fetch_assoc($result_brands)) {
+        $brand_title = $row_data['brand_title'];
+        $brand_id = $row_data['brand_id'];
+        echo "    <li class='nav-item'>
+        <a href='index.php?brand=$brand_id' class='nav-link text-light'>$brand_title</a>
+      </li>";
+      }
+    ?>
   </ul>
 
   <!-- categories to be displatyed -->
