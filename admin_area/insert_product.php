@@ -13,6 +13,7 @@ if (isset($_POST['insert_product'])) {
     $product_image2 = $_FILES['product_image2']['name'];
     $product_image3 = $_FILES['product_image3']['name'];
 
+    
     //accessing image temp name
     $temp_image1 = $_FILES['product_image1']['tmp_name'];
     $temp_image2 = $_FILES['product_image2']['tmp_name'];
