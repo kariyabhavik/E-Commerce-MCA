@@ -92,7 +92,7 @@ include('functions/common_function.php');
           <?php
           // Calling function
           // search_product();
-          getproducts();
+          view_details();
           get_unique_categories();
           get_unique_brands();
           ?>
@@ -131,7 +131,7 @@ include('functions/common_function.php');
 
     <!-- last child -->
     <?php
-    include("./includes/footer.php"); 
+    include("./includes/footer.php");
     ?>
   </div>
 
