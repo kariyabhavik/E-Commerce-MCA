@@ -204,8 +204,7 @@ session_start();
                             name='continue_shopping'>
                         <button class='bg-secondary p-3 py-2 border-0 '><a href='./user_area/checkout.php' class='text-light text-decoration-none'>Checkout</a></button>";
                         }else{
-                            echo "<a href='index.php'><button class='bg-info p-3 py-2 border-0 mx-3'>Continue
-                            Shopping</button></a>"; 
+                            echo "<a href='index.php'><button class='bg-info p-3 py-2 border-0 mx-3'>Continue Shopping</button></a>"; 
                         }
 
                         if (isset($_POST['continue_shopping'])) {
