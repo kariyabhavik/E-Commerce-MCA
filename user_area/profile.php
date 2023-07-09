@@ -25,7 +25,7 @@ session_start();
   <link rel="stylesheet" href="../Style.css">
   <style>
     body{
-        overflow-x: hidden; ;
+        overflow-x: hidden; 
     }
 </style>
 </head>
@@ -149,6 +149,9 @@ session_start();
           }
           if (isset($_GET['my_orders'])) {
             include('user_orders.php');
+          }
+          if (isset($_GET['delete_account'])) {
+            include('delete_account.php');
           }
           ?>
         </div>
